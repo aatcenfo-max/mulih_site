@@ -1,0 +1,219 @@
+@use "../utils/mixins" as *;
+
+.about {
+  padding-top: 200px;
+  display: flex;
+  gap: 56px;
+}
+.card {
+  position: absolute;
+  top: -80px;
+  left: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floatingCard 4s ease-in-out infinite;
+}
+@keyframes floatingCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.tick_square {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.card_reviews {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg);
+  box-shadow: 35px 35px 65px 0 rgba(146, 106, 120, 0.16);
+}
+.review {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 111%;
+  letter-spacing: 0em;
+  color: var(--title-list);
+}
+.starts {
+  margin-top: 8px;
+}
+.trust {
+  margin-top: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0em;
+  color: var(--text-color-2);
+}
+.count_reviews {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0em;
+  color: var(--title-list);
+}
+.background_apartment {
+  position: relative;
+}
+.count_sale {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 32px;
+  padding: 12px 32px;
+  width: 515px;
+  background: var(--card-bg);
+}
+.sales {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+.num_sale {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 121%;
+  letter-spacing: 0em;
+  color: var(--title-list);
+  transition: color 0.3s ease;
+}
+.text_sale {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 163%;
+  letter-spacing: 0em;
+  color: var(--text-color-2);
+}
+.rents {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+.num_rent {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 121%;
+  letter-spacing: 0em;
+  color: var(--title-list);
+  transition: color 0.3s ease;
+}
+.text_rent {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 163%;
+  letter-spacing: 0em;
+  color: var(--text-color-2);
+}
+.wrapper_about {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  padding-bottom: 34px;
+}
+.about_us {
+  padding: 12px 24px;
+  width: 141px;
+  background: var(--bg-hero-rent);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144%;
+  letter-spacing: 0.03em;
+  color: var(--price-color);
+}
+.about_us_title {
+  margin-top: 16px;
+  font-family: var(--font3);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 117%;
+  letter-spacing: 0.01em;
+  color: var(--title-list);
+}
+.about_us_text {
+  margin-top: 16px;
+  width: 450px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 163%;
+  letter-spacing: 0em;
+  color: var(--text-color);
+}
+.about_us_btn {
+  margin-top: 48px;
+  width: 186px;
+  padding: 18px 48px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0em;
+  color: var(--card-bg);
+  box-shadow: 24px 24px 65px 0 rgba(81, 140, 119, 0.24);
+  background: var(--price-color);
+}
+
+.sales:hover,
+.rents:hover {
+  transform: scale(1.05);
+}
+
+.sales:hover .num_sale,
+.rents:hover .num_rent {
+  color: var(--price-color);
+}
+.about_us_btn:hover {
+  transform: translateY(-3px);
+  background: var(--hover-button);
+  box-shadow: 0 15px 30px rgba(81, 140, 119, 0.4);
+}
+
+.about_us_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: all 1s;
+}
+
+.about_us_btn:hover::before {
+  left: 150%;
+  transition: 0.5s;
+}
+@include desktop;
+@include tablet;
+@include phone;

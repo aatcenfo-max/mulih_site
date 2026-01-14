@@ -1,0 +1,160 @@
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+    .title_text {
+      font-size: 32px;
+    }
+    .recomendation,
+    .about_us_title,
+    .title_wrapper {
+      font-size: 28px;
+    }
+    .sign,
+    .login {
+      padding: 15px 35px;
+      text-align: center;
+    }
+    .block_price {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .subscribe_form {
+      flex-direction: column;
+    }
+    .subscribe_form button {
+      padding: 15px;
+    }
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+    .burger_btn {
+      display: flex;
+    }
+    .buttons_header {
+      display: none;
+    }
+    .theme_toggle_btn {
+      display: none;
+    }
+    .mobile_only {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .navigation {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: var(--bg-color);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      padding: 100px 40px;
+      transition: 0.5s;
+      z-index: 100;
+    }
+
+    .burger_checkbox:checked ~ .navigation {
+      right: 0;
+    }
+    .list_nav {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .burger_checkbox:checked + .burger_btn span:nth-child(1) {
+      transform: translateY(8.5px) rotate(45deg);
+    }
+    .burger_checkbox:checked + .burger_btn span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger_checkbox:checked + .burger_btn span:nth-child(3) {
+      transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    .hero {
+      background-image: none;
+      text-align: center;
+      padding-top: 40px;
+    }
+    .title_text,
+    .text_hero {
+      width: 100%;
+    }
+    .block_options {
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .blocks_list,
+    .list_advante,
+    .list_comments,
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .follow_us {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .block,
+    .advante_block,
+    .comment {
+      width: 100%;
+      max-width: 450px;
+    }
+    .about {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .background_apartment img {
+      width: 100%;
+      height: auto;
+    }
+    .count_sale {
+      width: 100%;
+      position: static;
+      justify-content: center;
+    }
+    .wrapper_footer {
+      margin-left: 0;
+      text-align: center;
+      flex-direction: column;
+    }
+    .card {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+@mixin desktop {
+  @media (max-width: 1240px) {
+    @content;
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .navigation {
+      padding-left: 50px;
+    }
+    .wrapper_footer {
+      margin-left: 50px;
+      gap: 40px;
+    }
+    .title_text {
+      font-size: 48px;
+      width: 100%;
+    }
+    .hero {
+      background-size: 40%;
+    }
+  }
+}

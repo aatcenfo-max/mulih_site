@@ -1,0 +1,154 @@
+@use "../utils/mixins" as *;
+
+.footer {
+  display: flex;
+  padding-top: 195px;
+  padding-bottom: 100px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.description {
+  margin-top: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 163%;
+  letter-spacing: 0em;
+  color: var(--title-color);
+}
+.newsletter {
+  margin-top: 24px;
+}
+.title_newsletter {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--name-avatar);
+}
+.subscribe_form {
+  margin-top: 16px;
+  display: flex;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+.subscribe_form:focus-within {
+  border-color: var(--price-color);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.subscribe_form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  background-color: var(--container-bg);
+  outline: none;
+  color: var(--subscribe_form-input);
+}
+
+.subscribe_form input::placeholder {
+  color: var(--border-color);
+}
+
+.subscribe_form button {
+  background-color: var(--price-color);
+  box-shadow: 0 0 65px 0 var(--hover-button-shadow);
+  color: var(--card-bg);
+  border: none;
+  padding: 0 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe_form button:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 5px 20px var(--hover-button-shadow);
+  transform: scale(1.02);
+}
+.subscribe_form button:active {
+  transform: scale(0.95);
+}
+.wrapper_footer {
+  display: flex;
+  gap: 80px;
+  margin-left: 214px;
+}
+.wrapper_list_footer {
+  width: 146px;
+}
+.list_footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  gap: 16px;
+}
+.title_list_footer {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--name-avatar);
+}
+.title_list_text {
+  display: block;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--job-avatar);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.title_list_text:hover {
+  color: var(--price-color);
+  transform: translateX(5px);
+}
+.follow_us {
+  margin-left: 138px;
+}
+.follow {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--name-avatar);
+}
+.apps {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+}
+.row_app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--container-bg);
+  border-radius: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.row_app:hover {
+  background-color: var(--price-color);
+  transform: translateY(-5px);
+}
+.row_app:hover img,
+.row_app:hover svg {
+  filter: brightness(0) invert(1);
+}
+@include desktop;
+@include tablet;
+@include phone;
