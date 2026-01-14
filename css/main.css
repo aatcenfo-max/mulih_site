@@ -233,8 +233,7 @@ body {
 
 .sign,
 .login {
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
-    background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
 }
 
@@ -746,7 +745,7 @@ body {
   position: relative;
   padding-bottom: 108px;
   padding-top: 65px;
-  background-image: url(/assets/images/house.png);
+  background-image: url(/assets/images/house.webp);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -872,8 +871,8 @@ body {
   letter-spacing: 0em;
   color: #a6a6a6;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent;
   border: none;
   outline: none;
@@ -894,8 +893,7 @@ body {
   letter-spacing: 0em;
   color: #fff;
   border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
@@ -1821,12 +1819,7 @@ body {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: all 1s;
 }
 
@@ -2264,4 +2257,4 @@ body {
   .subscribe_form button {
     padding: 15px;
   }
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
