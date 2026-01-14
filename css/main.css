@@ -233,7 +233,8 @@ body {
 
 .sign,
 .login {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
   cursor: pointer;
 }
 
@@ -278,7 +279,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -599,7 +599,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -873,8 +872,8 @@ body {
   letter-spacing: 0em;
   color: #a6a6a6;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: transparent;
   border: none;
   outline: none;
@@ -895,7 +894,8 @@ body {
   letter-spacing: 0em;
   color: #fff;
   border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
   cursor: pointer;
 }
 
@@ -928,7 +928,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -1247,7 +1246,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -1458,7 +1456,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -1824,7 +1821,12 @@ body {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: all 1s;
 }
 
@@ -1837,7 +1839,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -2121,7 +2122,6 @@ body {
   .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 100px;
   }
   .navigation {
     padding-left: 50px;
@@ -2264,4 +2264,4 @@ body {
   .subscribe_form button {
     padding: 15px;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
